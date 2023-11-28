@@ -1,0 +1,72 @@
+
+--CRUD Queries:
+
+--CRUD Queries for table ( department )
+
+--insert statment for table department
+INSERT INTO department (dep_id, sec_id,dep_name,sec_name)
+VALUES
+('1','2', 'hr','Help Desk')
+
+--select statment for table department
+select * from department where dep_id='1'
+
+--update statment for table department
+update department set dep_name='IT' where dep_id='1'
+
+--delete statment for table department
+delete from department where dep_id='1' 
+
+--CRUD Queries for table ( cost_center)
+
+--insert statment for table cost_center
+INSERT INTO cost_center (cost_level1, cost_level2, cost_name)
+VALUES
+('1','1','mantince')
+
+--select  statment for table cost_center
+select * from cost_center where cost_level1='1'
+
+--update  statment for table cost_center
+update cost_center set cost_name='mantinance' where cost_level1='1'
+
+--delete  statment for table cost_center
+delete from cost_center where cost_level1='1' 
+Go
+
+
+--CRUD Queries for table (emp_status)
+
+--insert statment for table emp_status
+INSERT INTO emp_status (emp_stat_id, emp_stat_name)
+VALUES
+('1','Intern')
+
+--select statment for table emp_status
+select * from emp_status where emp_stat_id='1'
+
+--update statment for table emp_status
+update emp_status set emp_stat_id='3' where emp_stat_name='Intern'
+
+--delete statment for table emp_status
+delete from emp_status where emp_stat_id='3' 
+Go
+
+
+--CRUD Queries for table (religions)
+
+--insert statment for table religions
+INSERT INTO religions (religion_id, religion_name)
+VALUES
+('1', 'Islam')
+
+--select statment for table religions
+select * from religions where religion_id='1'
+
+--update statment for table religions
+update religions set religion_name='other' where religion_id='1'
+
+--delete statment for table religions
+delete from religions where religion_id='1' 
+Go
+

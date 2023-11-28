@@ -1,0 +1,25 @@
+
+--function to calculate income Tax 
+
+Go
+
+create function get_tax(@salary decimal)
+
+RETURNS real AS
+BEGIN
+	DECLARE @e_salary decimal, @yearly_sal decimal, @taxed_sal decimal, @result decimal
+    set @e_salary = @salary;
+	set @yearly_sal=@salary*12;
+	SET @taxed_sal = 0.00;
+    IF(@yearly_sal<=15000)set @taxed_sal=0; 
+    ELSE IF(@yearly_sal<=30000)set @taxed_sal= (@yearly_sal-15000)*0.025;
+    ELSE IF(@yearly_sal<=45000)set @taxed_sal= (@yearly_sal-30000)*0.1%+375;
+    ELSE IF(@yearly_sal<=60000)set @taxed_sal= (@yearly_sal-45000)*0.15+1875;
+    ELSE IF(@yearly_sal<=200000)set @taxed_sal=(@yearly_sal-60000)*0.2+4125;
+    ELSE IF(@yearly_sal<=400000)set @taxed_sal=(@yearly_sal-200000)*0.225+7125;
+    ELSE IF(@yearly_sal<=600000)set @taxed_sal=(@yearly_sal-400000)*0.25+38625;
+	set @result = @taxed_sal/12;
+
+   RETURN @result
+END;
+Go

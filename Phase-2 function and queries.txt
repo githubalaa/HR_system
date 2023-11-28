@@ -1,0 +1,45 @@
+
+--function to calculate the monthly income Tax 
+
+Go
+
+create function get_tax(@salary decimal)
+
+RETURNS real AS
+BEGIN
+	DECLARE @e_salary decimal, @yearly_sal decimal, @taxed_sal decimal, @result decimal
+    set @e_salary = @salary;
+	set @yearly_sal=@salary*12;
+	SET @taxed_sal = 0.00;
+    IF(@yearly_sal<=15000)set @taxed_sal=0; 
+    ELSE IF(@yearly_sal<=30000)set @taxed_sal= (@yearly_sal-15000)*0.025;
+    ELSE IF(@yearly_sal<=45000)set @taxed_sal= (@yearly_sal-30000)*0.1%+375;
+    ELSE IF(@yearly_sal<=60000)set @taxed_sal= (@yearly_sal-45000)*0.15+1875;
+    ELSE IF(@yearly_sal<=200000)set @taxed_sal=(@yearly_sal-60000)*0.2+4125;
+    ELSE IF(@yearly_sal<=400000)set @taxed_sal=(@yearly_sal-200000)*0.225+7125;
+    ELSE IF(@yearly_sal<=600000)set @taxed_sal=(@yearly_sal-400000)*0.25+38625;
+	set @result = @taxed_sal/12;
+
+   RETURN @result
+END;
+Go
+
+--Create a query to get all details about loans per employee
+
+select * from loans where emp_id='00001';
+
+-- Create a query to get details about specific loan per employee
+
+select * from loans where emp_id='00001' and loan_date='10/10/2023';
+
+-- Create a query to get all vacation details for all employee with balance per employee
+
+SELECT employees.emp_name,employees.vac_balance, vacation.* FROM vacation Join employees 
+ON vacation.emp_id =employees.emp_id where employees.vac_balance!=0;
+
+-- Create a query to get all vacation details for specific employee with balance 
+
+SELECT employees.emp_name,employees.vac_balance, vacation.* FROM vacation Join employees 
+ON vacation.emp_id =employees.emp_id where employees.vac_balance!=0 AND employees.emp_id='00001';
+
+

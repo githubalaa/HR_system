@@ -1,0 +1,176 @@
+
+--stored procedure:
+
+--Insert stored procedure for table department
+Go
+create procedure department_insert(
+@dep_id varchar(2),
+@sec_id varchar(2),
+@dep_name varchar(50),
+@sec_name varchar(50)
+)
+As
+INSERT INTO department VALUES(@dep_id, @sec_id,@dep_name,@sec_name)
+Go
+
+--read stored procedure for table department
+create procedure department_read(
+@dep_id varchar(2),
+@sec_id varchar(2),
+@dep_name varchar(50),
+@sec_name varchar(50)
+)
+As
+select * from department
+Go
+
+--Update stored procedure for table department
+create procedure department_update(
+        @dep_id varchar(2),
+		@sec_id varchar(2),
+		@dep_name varchar(50),
+		@sec_name varchar(50)
+)AS
+BEGIN
+	UPDATE department
+	SET dep_id =@dep_id,
+		sec_id =@sec_id,
+		dep_name =@dep_name,
+		sec_name =@sec_name
+    WHERE dep_id =@dep_id	 
+END
+Go
+
+--Delete stored procedure for table department
+create procedure department_delete(
+@dep_id varchar(2),
+@sec_id varchar(2),
+@dep_name varchar(50),
+@sec_name varchar(50)
+)
+As
+DELETE department where dep_id= @dep_id
+Go
+
+--Insert stored procedure for table cost_center
+create procedure cost_center_insert(
+@cost_level1 varchar(2),
+@cost_level2 varchar(2),
+@cost_name varchar(30)
+)
+As
+INSERT INTO cost_center VALUES(@cost_level1, @cost_level2, @cost_name)
+Go
+
+--read stored procedure for table cost_center
+create procedure cost_center_read(
+@cost_level1 varchar(2),
+@cost_level2 varchar(2),
+@cost_name varchar(30)
+)
+As
+select * from cost_center where cost_level1='1'
+Go
+
+--Update stored procedure for table cost_center
+create procedure cost_center_update(
+        @cost_level1 varchar(2),
+		@cost_level2 varchar(2),
+		@cost_name varchar(30)
+)AS
+BEGIN
+	UPDATE cost_center
+	SET cost_level1 =@cost_level1,
+		cost_level2 =@cost_level2,
+		cost_name =@cost_name
+    WHERE cost_level1 =@cost_level1	 
+END
+Go
+
+--Delete stored procedure for table cost_center
+create procedure cost_center_delete(
+@cost_level1 varchar(2),
+@cost_level2 varchar(2),
+@cost_name varchar(30)
+)
+As
+DELETE cost_center where cost_level1= @cost_level1
+Go
+
+--Insert stored procedure table emp_status
+create procedure emp_status_insert(
+@emp_stat_id varchar(1),
+@emp_stat_name varchar(20) not null
+)
+As
+INSERT INTO emp_status VALUES(@emp_stat_id, @emp_stat_name)
+Go
+
+--read stored procedure table emp_status
+create procedure emp_status_read(
+@emp_stat_id varchar(1),
+@emp_stat_name varchar(20) not null
+)
+As
+select * from emp_status
+Go
+
+--Update stored procedure for table emp_status
+create procedure emp_status_update(
+        @emp_stat_id varchar(1),
+		@emp_stat_name varchar(20) not null
+)AS
+BEGIN
+	UPDATE emp_status
+	SET emp_stat_id= @emp_stat_id,
+	    emp_stat_name= @emp_stat_name
+    WHERE emp_stat_id= @emp_stat_id 
+END
+Go
+
+--Delete stored procedure table emp_status
+create procedure emp_status_delete(
+@emp_stat_id varchar(1),
+@emp_stat_name varchar(20) not null
+)
+As
+DELETE emp_status where emp_stat_id= @emp_stat_id
+Go
+
+--Insert stored procedure for table religions
+create procedure religions_insert(
+@religion_id varchar(2),
+@religion_name varchar(20)
+)
+As
+INSERT INTO religions VALUES(@religion_id, @religion_name)
+Go
+
+--read stored procedure for table religions
+create procedure religions_read(
+@religion_id varchar(2),
+@religion_name varchar(20)
+)
+As
+select * from religions
+Go
+--Update stored procedure for table religions
+create procedure religions_update(
+        @religion_id varchar(2),
+		@religion_name varchar(20)
+)AS
+BEGIN
+	UPDATE religions
+	SET religion_id= @religion_id,
+		religion_name= @religion_name 
+    WHERE religion_id= @religion_id
+END
+Go
+--Delete stored procedure for table religions
+create procedure religions_delete(
+@religion_id varchar(2),
+@religion_name varchar(20)
+)
+As
+DELETE religions where religion_id= @religion_id
+Go
