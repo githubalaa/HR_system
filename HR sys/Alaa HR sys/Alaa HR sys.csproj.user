@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="attend_op.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Bouns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Bouns_Base.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="cost_center.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="departments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Employees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="emp_status.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="exp_base.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Exp_op.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="gndr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Income Tax.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="loans_op.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="mrtl_stat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Nationalities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="overtime_op.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="payroll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="rec_ded_base.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="rec_ded_op.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="religions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="vac_base.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vac_op.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
