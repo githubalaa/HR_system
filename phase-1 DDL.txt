@@ -1,0 +1,259 @@
+--DDL Script to create Tables, Relations and Constraints for data integrity
+
+create Table department(
+dep_id varchar(2),
+sec_id varchar(2),
+dep_name varchar(50),
+sec_name varchar(50),
+primary key(dep_id,sec_id)
+)
+
+create table cost_center(
+cost_level1 varchar(2),
+cost_level2 varchar(2),
+cost_name varchar(30),
+primary key(cost_level1,cost_level2)
+)
+
+create table emp_status(
+emp_stat_id varchar(1),
+emp_stat_name varchar(20) not null, 
+primary key(emp_stat_id)
+)
+
+create table religions(
+religion_id varchar(2),
+religion_name varchar(20) not null,
+primary key(religion_id)
+)
+
+create table nationality(
+natinol_id varchar(3),
+national_name varchar(20) not null,
+primary key(natinol_id)
+)
+create table gndr(
+gndr_id varchar(1),
+gndr_name varchar(20) not null,
+primary key(gndr_id)
+)
+create table marital_status(
+mrtl_stat_id varchar(1),
+mrtl_stat_name varchar(20) not null,
+primary key(mrtl_stat_id)
+)
+create Table employees(
+  emp_id varchar(5),
+  emp_name varchar(60) not null,
+  position varchar(20),
+  emp_stat_id varchar(1) not null,
+  emp_salary real not null,
+  dep_id varchar(2),
+  sec_id varchar(2),
+  cost_level1 varchar(2),
+  cost_level2 varchar(2),
+  religion_id varchar(2) not null,
+  emp_ssn varchar(10) not null,
+  natinol_id varchar(3) not null,
+  gndr_id varchar(1) not null,
+  emp_phone varchar(10),
+  emp_address varchar(30),
+  mrtl_stat_id varchar(1),
+  emp_birthdate date,
+  emp_join_date date,
+  emp_resigned_date date,
+  vac_open_balance real,
+  vac_balance real,
+  emp_atm varchar(16),
+  emp_email varchar(30),
+  emp_in_test bit,
+  primary key(emp_id),
+  FOREIGN KEY (dep_id,sec_id) REFERENCES department(dep_id,sec_id),
+  FOREIGN KEY (cost_level1,cost_level2) REFERENCES cost_center(cost_level1,cost_level2),
+  FOREIGN KEY (emp_stat_id) REFERENCES emp_status(emp_stat_id),
+  FOREIGN KEY (religion_id) REFERENCES religions(religion_id),
+  FOREIGN KEY (natinol_id) REFERENCES nationality(natinol_id),
+  FOREIGN KEY (gndr_id) REFERENCES gndr(gndr_id),
+  FOREIGN KEY (mrtl_stat_id) REFERENCES marital_status(mrtl_stat_id)
+)
+create Table attendance(
+emp_id varchar(5),
+sign_in datetime,
+sign_out datetime,
+primary key(sign_in, emp_id),
+FOREIGN KEY (emp_id) REFERENCES employees(emp_id) 
+)
+create Table overtime(
+emp_id varchar(5),
+over_date datetime,
+over_hours real not null,
+over_status varchar(1),
+over_factor real,
+primary key(emp_id, over_date),
+FOREIGN KEY (emp_id) REFERENCES employees(emp_id)
+)
+create table bouns_base(
+bouns_id varchar(2),
+bouns_type varchar(20) not null,
+bouns_factor real not null,
+primary key(bouns_id)
+)
+create Table bouns(
+emp_id varchar(5) not null,
+bouns_id varchar(2) not null,
+bouns_date date not null,
+primary key(emp_id, bouns_id, bouns_date),
+FOREIGN KEY (emp_id) REFERENCES employees(emp_id),
+FOREIGN KEY (bouns_id) REFERENCES bouns_base(bouns_id)
+)
+create Table vacation_base(
+vac_code varchar(2),
+vac_type varchar(25),
+vac_factor real not null,
+gndr_id varchar(1) not null,
+religion_id varchar(2) not null,
+yearly_rest bit not null,
+primary key(vac_code),
+FOREIGN KEY (religion_id) REFERENCES religions(religion_id),
+FOREIGN KEY (gndr_id) REFERENCES gndr(gndr_id) 
+)
+create Table vacation(
+emp_id varchar(5),
+vac_code varchar(2),
+from_date datetime not null,
+end_date datetime not null,
+vac_posted bit,
+vac_days real,
+primary key(emp_id,vac_code,from_date),
+FOREIGN KEY (vac_code) REFERENCES vacation_base(vac_code),
+FOREIGN KEY (emp_id) REFERENCES employees(emp_id) 
+)
+create Table loans(
+emp_id varchar(5),
+loan_date date,
+loan_amount real,
+loan_balance real,
+loan_instal_amount real not null,
+loan_start_month int,
+loan_start_year int,
+loan_suspend bit,
+primary key(emp_id, loan_date),
+FOREIGN KEY (emp_id) REFERENCES employees(emp_id)
+)
+create table expencess_base(
+exp_code varchar(2),
+exp_type varchar(50) not null,
+has_tax bit not null,
+primary key(exp_code)
+)
+create table expencess(
+exp_code varchar(2),
+emp_id varchar(5),
+exp_date date,
+exp_amount real not null,
+exp_descrip varchar(50),
+primary key(emp_id, exp_code, exp_date),
+FOREIGN KEY (emp_id) REFERENCES employees(emp_id),
+FOREIGN KEY (exp_code) REFERENCES expencess_base(exp_code) 
+)
+create table recieve_deduct_base(
+rec_dedc_id varchar(3),
+rec_dedc_name varchar(30) not null,
+rec_dedc_descrip varchar(50),
+primary key(rec_dedc_id)
+)
+create table recieve_deduct(
+rec_dedc_id varchar(3),
+emp_id varchar(5),
+rec_dedc_date date,
+recieve_amount real,
+deduct_amount real,
+primary key(emp_id, rec_dedc_id, rec_dedc_date),
+FOREIGN KEY (emp_id) REFERENCES employees(emp_id),
+FOREIGN KEY (rec_dedc_id) REFERENCES recieve_deduct_base(rec_dedc_id) 
+)
+create table income_tax(
+tax_id varchar(1),
+tax_from int not null,
+tax_to int not null,
+tax_factor real not null,
+primary key(tax_id)
+)
+
+set quoted_identifier on
+go
+CREATE TABLE Payroll (
+  slip_no int  NOT NULL UNIQUE CHECK (slip_no>0) identity(1,1),
+  emp_id varchar (5) NOT NULL, 
+  Pay_month int ,
+  pay_year int,
+  dep_id varchar (2) NULL, 
+  sec_id varchar (2) NULL,
+  cost_level1 varchar (2) NULL,
+  cost_level2 varchar (2) NULL,
+  emp_salary real, 
+  over_amount real , 
+  bouns_amount real , 
+  exp_amount real , 
+  loan_instal_amount real , 
+  recieve_amount real,  
+  deduct_amount real, 
+  vac_amount float , 
+  pay_date datetime ,
+  tax_due_amount float ,
+  income_tax float ,
+  net_pay float ,
+
+
+PRIMARY KEY (emp_id ,Pay_month ,pay_year),
+FOREIGN KEY (emp_id) REFERENCES employees(emp_id)
+)
+
+--Alter tables to add diffrent constraints in diffrent tables
+
+Alter table employees
+ADD CONSTRAINT gender_check check(gndr_id in('f' , 'm'))
+Alter table employees
+ADD CONSTRAINT jdate_check check (emp_birthdate < emp_join_date)
+Alter table employees
+ADD CONSTRAINT phone_format check (emp_phone like '05--------')
+Alter table employees
+ADD CONSTRAINT ssn_check check (emp_ssn like '[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]')
+Alter table employees
+ADD CONSTRAINT emp_salary check  (emp_salary >= 0)
+Alter table employees
+ADD CONSTRAINT def_joindate default getdate() for emp_join_date
+Alter table employees
+ADD CONSTRAINT def_religion default 1 for religion_id
+Alter table overtime
+ADD CONSTRAINT df_o_factor default 2 for over_factor
+Alter table vacation_base
+ADD CONSTRAINT def_yearly_rest default 1 for yearly_rest
+Alter table vacation
+ADD CONSTRAINT def_vac_posted default 0 for vac_posted
+Alter table vacation_base
+ADD CONSTRAINT genderVacB_check check(gndr_id in('f' , 'm', 'a'))
+Alter table loans
+ADD CONSTRAINT def_loan_month default month(getdate()) for loan_start_month
+Alter table loans
+ADD CONSTRAINT year_format check (loan_start_year like '[2][0][2-9][0-9]')
+Alter table loans
+ADD CONSTRAINT def_loan_year default year(getdate()) for loan_start_year
+Alter table loans
+ADD CONSTRAINT def_month_range check(loan_start_month in(1,2,3,4,5,6,7,8,9,10,11,12))
+Alter table loans
+ADD CONSTRAINT loan_year_check check (year(getdate()) <= loan_start_year)
+Alter table loans
+ADD CONSTRAINT def_loan_syspend default 0 for loan_suspend
+Alter table recieve_deduct_base
+ADD CONSTRAINT recieve_deductB_id_format check(rec_dedc_id like '[d][0-9][0-9]' or rec_dedc_id like '[r][0-9][0-9]')
+Alter table recieve_deduct
+ADD CONSTRAINT recieve_deductB_id_format check(rec_dedc_id like '[d][0-9][0-9]' or rec_dedc_id like '[r][0-9][0-9]')
+Alter table payroll
+ADD CONSTRAINT pay_year_range check (pay_year like '[2][0][2-9][0-9]')
+Alter table payroll
+ADD CONSTRAINT def_loan_year default year(getdate()) for pay_year
+Alter table payroll
+ADD CONSTRAINT pay_month_range check(pay_month in(1,2,3,4,5,6,7,8,9,10,11,12))
+Alter table payroll
+ADD CONSTRAINT Pdef_year_range check(pay_year >=1950 and pay_year <= year(getdate()))
