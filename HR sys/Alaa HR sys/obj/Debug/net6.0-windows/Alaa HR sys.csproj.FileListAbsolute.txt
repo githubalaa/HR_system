@@ -1,0 +1,46 @@
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\bin\Debug\net6.0-windows\Alaa HR sys.exe
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\bin\Debug\net6.0-windows\Alaa HR sys.deps.json
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\bin\Debug\net6.0-windows\Alaa HR sys.runtimeconfig.json
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\bin\Debug\net6.0-windows\Alaa HR sys.dll
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\bin\Debug\net6.0-windows\Alaa HR sys.pdb
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\obj\Debug\net6.0-windows\Alaa_HR_sys.attend_op.resources
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\obj\Debug\net6.0-windows\Alaa_HR_sys.cost_center.resources
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\obj\Debug\net6.0-windows\Alaa_HR_sys.departments.resources
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\obj\Debug\net6.0-windows\Alaa_HR_sys.Employees.resources
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\obj\Debug\net6.0-windows\Alaa_HR_sys.emp_status.resources
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\obj\Debug\net6.0-windows\Alaa_HR_sys.exp_base.resources
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\obj\Debug\net6.0-windows\Alaa_HR_sys.Exp_op.resources
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\obj\Debug\net6.0-windows\Alaa_HR_sys.gndr.resources
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\obj\Debug\net6.0-windows\Alaa_HR_sys.Home.resources
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\obj\Debug\net6.0-windows\Alaa_HR_sys.Income_Tax.resources
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\obj\Debug\net6.0-windows\Alaa_HR_sys.loans_op.resources
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\obj\Debug\net6.0-windows\Alaa_HR_sys.mrtl_stat.resources
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\obj\Debug\net6.0-windows\Alaa_HR_sys.Nationalities.resources
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\obj\Debug\net6.0-windows\Alaa_HR_sys.overtime_op.resources
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\obj\Debug\net6.0-windows\Alaa_HR_sys.payroll.resources
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\obj\Debug\net6.0-windows\Alaa_HR_sys.Properties.Resources.resources
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\obj\Debug\net6.0-windows\Alaa_HR_sys.rec_ded_base.resources
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\obj\Debug\net6.0-windows\Alaa_HR_sys.rec_ded_op.resources
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\obj\Debug\net6.0-windows\Alaa_HR_sys.religions.resources
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\obj\Debug\net6.0-windows\Alaa_HR_sys.vac_base.resources
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\obj\Debug\net6.0-windows\Alaa_HR_sys.Vac_op.resources
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\obj\Debug\net6.0-windows\Alaa HR sys.csproj.GenerateResource.cache
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\obj\Debug\net6.0-windows\Alaa HR sys.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\obj\Debug\net6.0-windows\Alaa HR sys.AssemblyInfoInputs.cache
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\obj\Debug\net6.0-windows\Alaa HR sys.AssemblyInfo.cs
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\obj\Debug\net6.0-windows\Alaa HR sys.csproj.CoreCompileInputs.cache
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\obj\Debug\net6.0-windows\Alaa HR sys.dll
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\obj\Debug\net6.0-windows\refint\Alaa HR sys.dll
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\obj\Debug\net6.0-windows\Alaa HR sys.pdb
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\obj\Debug\net6.0-windows\Alaa HR sys.genruntimeconfig.cache
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\obj\Debug\net6.0-windows\ref\Alaa HR sys.dll
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\obj\Debug\net6.0-windows\Alaa HR sys.csproj.AssemblyReference.cache
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\obj\Debug\net6.0-windows\Alaa HR sys.csproj.CopyComplete
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\obj\Debug\net6.0-windows\Alaa_HR_sys.Bouns.resources
+C:\Users\HUAWEI\source\repos\Alaa HR sys\Alaa HR sys\obj\Debug\net6.0-windows\Alaa_HR_sys.Bouns_base.resources
