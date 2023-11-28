@@ -1,0 +1,156 @@
+USE [SYSTEM_HR]
+GO 
+create user [user1] for login [user1]
+go
+USE [SYSTEM_HR]
+GO 
+alter role [db_datareader] add member [user1]
+USE [SYSTEM_HR]
+GO 
+alter role [db_datawriter] add member [user1]
+go
+
+USE [SYSTEM_HR]
+GO 
+create user [user2] for login [user2]
+go
+USE [SYSTEM_HR]
+GO 
+alter role [db_datareader] add member [user2]
+USE [SYSTEM_HR]
+GO 
+alter role [db_datawriter] add member [user2]
+go
+
+USE [SYSTEM_HR]
+GO 
+create user [user3] for login [user3]
+go
+USE [SYSTEM_HR]
+GO 
+alter role [db_datareader] add member [user3]
+USE [SYSTEM_HR]
+GO 
+alter role [db_datawriter] add member [user3]
+go
+
+USE [SYSTEM_HR]
+GO 
+create user [user4] for login [user4]
+go
+USE [SYSTEM_HR]
+GO 
+alter role [db_datareader] add member [user4]
+USE [SYSTEM_HR]
+GO 
+alter role [db_datawriter] add member [user4]
+go
+
+USE [SYSTEM_HR]
+GO 
+create user [user5] for login [user5]
+go
+USE [SYSTEM_HR]
+GO 
+alter role [db_datareader] add member [user5]
+USE [SYSTEM_HR]
+GO 
+alter role [db_datawriter] add member [user5]
+go
+
+USE [SYSTEM_HR]
+GO 
+create user [user6] for login [user6]
+go
+USE [SYSTEM_HR]
+GO 
+alter role [db_datareader] add member [user6]
+USE [SYSTEM_HR]
+GO 
+alter role [db_datawriter] add member [user6]
+go
+
+USE [SYSTEM_HR]
+GO 
+create user [user7] for login [user7]
+go
+USE [SYSTEM_HR]
+GO 
+alter role [db_datareader] add member [user7]
+USE [SYSTEM_HR]
+GO 
+alter role [db_datawriter] add member [user7]
+go
+
+USE [SYSTEM_HR]
+GO 
+create user [user8] for login [user8]
+go
+USE [SYSTEM_HR]
+GO 
+alter role [db_datareader] add member [user8]
+USE [SYSTEM_HR]
+GO 
+alter role [db_datawriter] add member [user8]
+go
+
+USE [SYSTEM_HR]
+GO 
+create user [user9] for login [user9]
+go
+USE [SYSTEM_HR]
+GO 
+alter role [db_datareader] add member [user9]
+USE [SYSTEM_HR]
+GO 
+alter role [db_datawriter] add member [user9]
+go
+
+USE [SYSTEM_HR]
+GO 
+create user [user10] for login [user10]
+go
+USE [SYSTEM_HR]
+GO 
+alter role [db_datareader] add member [user10]
+USE [SYSTEM_HR]
+GO 
+alter role [db_datawriter] add member [user10]
+go
+
+
+USE [SYSTEM_HR]
+GO 
+create user [user11] for login [user11]
+go
+USE [SYSTEM_HR]
+GO 
+alter role [db_owner] add member [user11]
+USE [SYSTEM_HR]
+GO 
+alter role [db_owner] add member [user11]
+go
+
+USE [SYSTEM_HR]
+GO 
+create user [user12] for login [user12]
+go
+USE [SYSTEM_HR]
+GO 
+alter role [db_owner] add member [user12]
+USE [SYSTEM_HR]
+GO 
+alter role [db_owner] add member [user12]
+go
+
+
+BACKUP DATABASE [SYSTEM_HR] TO  DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL14.SQLEXPRESS\MSSQL\Backup\full' WITH NOFORMAT, INIT,  NAME = N'SYSTEM_HR-Full Database Backup', SKIP, NOREWIND, NOUNLOAD,  STATS = 10
+GO
+
+BACKUP DATABASE [SYSTEM_HR] TO  DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL14.SQLEXPRESS\MSSQL\Backup\diff' WITH  DIFFERENTIAL , NOFORMAT, INIT,  NAME = N'SYSTEM_HR-Full Database Backup', SKIP, NOREWIND, NOUNLOAD,  STATS = 10
+GO
+
+BACKUP LOG [SYSTEM_HR] TO  DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL14.SQLEXPRESS\MSSQL\Backup\trans-log' WITH NOFORMAT, INIT,  NAME = N'SYSTEM_HR-Full Database Backup', SKIP, NOREWIND, NOUNLOAD,  STATS = 10
+GO
+
+
